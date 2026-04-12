@@ -4,7 +4,7 @@ import { CartContext } from "../context";
 import Header from "../Header";
 import PizzaOfTheDay from "../PizzaOfTheDay";
 import { useState } from "react";
-
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 export const Route = createRootRoute({
   component: () => {
     const cartHook = useState([]);
@@ -18,6 +18,7 @@ export const Route = createRootRoute({
           </div>
         </CartContext.Provider>
         <TanStackRouterDevtools />
+        <ReactQueryDevtools initialIsOpen={false} />
       </>
     );
   },
